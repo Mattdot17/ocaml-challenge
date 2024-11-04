@@ -1,0 +1,11 @@
+(* consensus3 : ('a -> 'b) * ('a -> 'b) * ('a -> 'b) -> 'a -> 'b option *)
+
+
+let consensus3 (f0, f1, f2) n =
+  try
+    match (f0 n, f1 n, f2 n) with
+    | (v, v', v'') when v = v' || v = v'' -> Some v
+    | (_, v, v'') when v = v'' -> Some v
+    | _ -> None
+  with _ -> None
+;;
