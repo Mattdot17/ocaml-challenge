@@ -1,0 +1,19 @@
+(*_________________________*)
+
+
+(* option_map : ('a -> 'b) -> 'a option -> 'b option *)
+
+let opm f (Some x) = Some(f x);;
+
+(*oppure*)
+
+let opm f = function 
+    None -> None
+  | Some x -> Some(f x);;
+
+
+(*oppure*)
+
+  let opm f x = match x with
+    None -> None
+  | Some x -> Some(f x);;
