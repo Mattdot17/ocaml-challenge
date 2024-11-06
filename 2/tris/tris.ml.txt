@@ -1,0 +1,12 @@
+(*_________________________*)
+
+
+(* tris : 'a * 'a * 'a * 'a -> bool *)
+
+
+let tris (a,b,c,d) = match (a,b,c,d) with
+    (a,b,c,_) when a=b && b = c -> true
+  | (_,b,c,d) when b=c && c=d -> true
+  | (a,_,c,d) when a=c && c=d -> true
+  | (a,b,_,d) when a=b && b=d -> true
+  | _ -> false;;
