@@ -1,0 +1,3 @@
+(* x ha tipo 'a e si checka come dice la consegna se p e q sono veri per un argomento dato, in questo caso x*)
+let both_true p q = fun x -> 
+  (p x) && (q x);;
