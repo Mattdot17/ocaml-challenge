@@ -2,7 +2,7 @@
 
 
 let ( <|> ) x y = match x,y with
-    Some x, _ ->  Some x
+    Some x, y ->  Some x
   | None, Some y -> Some y
   | None, None -> None;;
 
@@ -10,6 +10,6 @@ let ( <|> ) x y = match x,y with
 (* or *)
 
 let ( <|> ) = function
-    Some x, _ ->  Some x
+    Some x, y ->  Some x
   | None, Some y -> Some y
   | None, None -> None;;
