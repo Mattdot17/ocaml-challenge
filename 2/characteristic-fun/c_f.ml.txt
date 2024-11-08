@@ -1,0 +1,59 @@
+(*_________________________*)
+
+
+(* fi : int -> int *)   
+  
+let f_empty x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else 0;;
+
+let f_012 x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else if x = 0 || x = 1 || x = 2 then 1 else 0;;
+
+let f_range x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else if x > 0 && x < 100 then 1 else 0;;
+
+let f_false x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else 0;;
+
+let f_always_true x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else 1;;
+
+let f_even x = 
+  if x < 0 then failwith "Undefined for negative integers"
+  else if x mod 2 = 0 then 1 else 0;;
+
+let f_always_true2 x = (* non sono sicuro di questa*)
+  if x < 0 then failwith "Undefined for negative integers"
+  else 1;;
+
+let f_exists_larger x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else 1;;
+
+(*9 e 10 non so farle*)
+
+let fifty x = 
+  if x < 50 && x mod 2 = 0 then 1 
+  else 0;;
+
+
+let f_double_in_50 z =
+  if z < 0 then failwith "Undefined for negative integers"
+  else if z mod 2 = 0 && z < 50 then 1 else 0;;
+
+(* 13 ?? *)
+
+let f_small_lt_2 x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else if x < 2 then 1 else 0;;
+
+let is_prime n =
+  let rec check d =
+    d * d > n || (n mod d <> 0 && check (d + 1))
+  in
+  if n > 1 && check 2 then 1 else 0;;
