@@ -35,7 +35,18 @@ let f_exists_larger x =
   if x < 0 then failwith "Undefined for negative integers"
   else 1;;
 
-(*9 e 10 non so farle*)
+let f_quad x =
+  if x < 0 then failwith "Undefined for negative integers"
+  else let root = int_of_float (sqrt (float_of_int x)) in
+    if root * root = x then 1 else 0;;
+
+
+
+let f_long x = 
+  if x < 0 then failwith "Undefined for negative integers"
+  else if (x > 7 && x < 10) then 1
+  else 0;;
+
 
 let fifty x = 
   if x < 50 && x mod 2 = 0 then 1 
