@@ -1,0 +1,2 @@
+let dice probab = 
+  if probab > 17 then 6 else 1 + Random.int 5;;
